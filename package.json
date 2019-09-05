@@ -11,9 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "consign": "^0.1.6",
     "express": "^4.17.1",
-    "mongoose": "^5.6.4"
+    "mongoose": "^5.6.4",
+    "validator": "^11.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
