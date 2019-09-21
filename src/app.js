@@ -2,9 +2,9 @@
 const express = require('express')
 const app = express()
 const cors = require('../src/config/cors')
+const bodyParser = require('body-parser')
 
 require('./db/mongoose')
-
 
 const port = process.env.PORT || 3333
 
@@ -17,7 +17,10 @@ const expenseMonthRouter = require('./routes/expenseMonth')
 const expenseExpenseCategoryRouter = require('./routes/expenseCategory')
 const userRouter = require('./routes/user')
 
+
 // Middleware
+app.use(bodyParser.urlencoded({extended: false}))
+
 app.use(express.json())
 
 app.use(cors)
